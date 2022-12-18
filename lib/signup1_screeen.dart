@@ -20,7 +20,7 @@ class _SignUp1ScreenState extends State<SignUp1Screen> {
                   colors: [
                     Colors.grey.shade900,
                     Colors.grey.shade700,
-                    Colors.grey.shade500,
+                    Colors.grey,
                   ])),
           child: Column(
             children: [

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class SignUpPage extends StatefulWidget {
   static const String id = "sign_up_page";
+
   const SignUpPage({Key? key}) : super(key: key);
 
   @override
@@ -11,7 +12,7 @@ class SignUpPage extends StatefulWidget {
 class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,
@@ -21,16 +22,17 @@ class _SignUpPageState extends State<SignUpPage> {
                   begin: Alignment.topLeft,
                   end: Alignment.centerRight,
                   colors: [
-                    Colors.grey.shade900,
-                    Colors.grey.shade700,
-                    Colors.grey.shade500,
-                  ])),
+                Colors.grey.shade900,
+                Colors.grey.shade700,
+                Colors.grey.shade500,
+              ])),
           child: Column(
             children: [
               Expanded(
                   flex: 2,
                   child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 20),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -72,7 +74,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       // #text_field
                       Container(
                         margin: const EdgeInsets.symmetric(horizontal: 30),
-                        height: MediaQuery.of(context).size.height*0.3,
+                        height: MediaQuery.of(context).size.height * 0.3,
                         width: double.infinity,
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -90,7 +92,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             TextField(
                               decoration: InputDecoration(
                                   contentPadding:
-                                  EdgeInsets.symmetric(horizontal: 10),
+                                      EdgeInsets.symmetric(horizontal: 10),
                                   border: InputBorder.none,
                                   hintText: "Fullname",
                                   hintStyle: TextStyle(color: Colors.grey)),
@@ -102,7 +104,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             TextField(
                               decoration: InputDecoration(
                                   contentPadding:
-                                  EdgeInsets.symmetric(horizontal: 10),
+                                      EdgeInsets.symmetric(horizontal: 10),
                                   border: InputBorder.none,
                                   hintText: "Email",
                                   hintStyle: TextStyle(color: Colors.grey)),
@@ -114,7 +116,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             TextField(
                               decoration: InputDecoration(
                                   contentPadding:
-                                  EdgeInsets.symmetric(horizontal: 10),
+                                      EdgeInsets.symmetric(horizontal: 10),
                                   border: InputBorder.none,
                                   hintText: "Phone",
                                   hintStyle: TextStyle(color: Colors.grey)),
@@ -126,7 +128,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             TextField(
                               decoration: InputDecoration(
                                   contentPadding:
-                                  EdgeInsets.symmetric(horizontal: 10),
+                                      EdgeInsets.symmetric(horizontal: 10),
                                   border: InputBorder.none,
                                   hintText: "Password",
                                   hintStyle: TextStyle(color: Colors.grey)),
@@ -140,7 +142,8 @@ class _SignUpPageState extends State<SignUpPage> {
 
                       // #signup_button
                       MaterialButton(
-                        onPressed: (){},
+                        onPressed: () =>
+                            Navigator.pushNamed(context, 'loginscreeen'),
                         height: 45,
                         minWidth: 240,
                         shape: const StadiumBorder(),
@@ -178,7 +181,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             color: Colors.blue,
                             shape: const StadiumBorder(),
                             height: 45,
-                            minWidth: MediaQuery.of(context).size.width*0.28,
+                            minWidth: MediaQuery.of(context).size.width * 0.28,
                             child: const Text(
                               "Facebook",
                               style: TextStyle(color: Colors.white),
@@ -189,7 +192,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             color: Colors.red,
                             shape: const StadiumBorder(),
                             height: 45,
-                            minWidth: MediaQuery.of(context).size.width*0.28,
+                            minWidth: MediaQuery.of(context).size.width * 0.28,
                             child: const Text(
                               "Google",
                               style: TextStyle(color: Colors.white),
@@ -200,12 +203,16 @@ class _SignUpPageState extends State<SignUpPage> {
                             color: Colors.black,
                             shape: const StadiumBorder(),
                             height: 45,
-                            minWidth: MediaQuery.of(context).size.width*0.28,
+                            minWidth: MediaQuery.of(context).size.width * 0.28,
                             child: const Text(
                               "Apple",
                               style: TextStyle(color: Colors.white),
                             ),
                           ),
+                          IconButton(
+                              onPressed: () =>
+                                  Navigator.pushNamed((context), 'loginscreeen'),
+                              icon: Text("hello"))
                         ],
                       ),
                     ],

@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:newtask/home_page.dart';
 import 'package:newtask/signup1_screeen.dart';
 import 'package:newtask/singup_screen.dart';
+
+import 'home_page.dart';
 
 void main ()
 {
   runApp(MaterialApp(
-    initialRoute: 'first_screeen',
+    debugShowCheckedModeBanner: false,
+    initialRoute: 'firstscreeen',
     routes: {
-      'first_screeen': (context)=>MyAPP(),
-      'login_screeen': (context)=>HomePage(),
+      'firstscreeen': (context)=>MyAPP(),
+      'loginscreeen': (context)=>HomePage(),
 
     },
   ));
@@ -20,9 +22,7 @@ class MyAPP extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SignUpPage(),
+    return Scaffold(body:  SignUpPage(),
     );
   }
 }

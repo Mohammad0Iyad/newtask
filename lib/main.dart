@@ -12,6 +12,7 @@ void main ()
     routes: {
       'firstscreeen': (context)=>MyAPP(),
       'loginscreeen': (context)=>HomePage(),
+      'SignUp1Screen':(context)=>SignUp1Screen()
 
     },
   ));
@@ -22,7 +23,7 @@ class MyAPP extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body:  SignUpPage(),
+    return  Scaffold(body: SignUpPage(),
     );
   }
 }

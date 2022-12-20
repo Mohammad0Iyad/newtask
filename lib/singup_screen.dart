@@ -211,7 +211,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           ),
                           IconButton(
                               onPressed: () =>
-                                  Navigator.pushNamed((context), 'loginscreeen'),
+                                  Navigator.pushNamed((context), 'SignUp1Screen'),
                               icon: Text("hello"))
                         ],
                       ),

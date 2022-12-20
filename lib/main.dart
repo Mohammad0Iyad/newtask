@@ -5,7 +5,14 @@ import 'package:newtask/singup_screen.dart';
 
 void main ()
 {
-  runApp(MyAPP());
+  runApp(MaterialApp(
+    initialRoute: 'first_screeen',
+    routes: {
+      'first_screeen': (context)=>MyAPP(),
+      'login_screeen': (context)=>HomePage(),
+
+    },
+  ));
 }
 
 class MyAPP extends StatelessWidget {
@@ -15,7 +22,7 @@ class MyAPP extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignUp1Screen(),
+      home: SignUpPage(),
     );
   }
 }

@@ -20,7 +20,7 @@ class _SignUp1ScreenState extends State<SignUp1Screen> {
                   colors: [
                     Colors.grey.shade900,
                     Colors.grey.shade700,
-                    Colors.grey,
+                    Colors.grey.shade300,
                   ])),
           child: Column(
             children: [
@@ -81,11 +81,9 @@ class _SignUp1ScreenState extends State<SignUp1Screen> {
                               hintText: "Password")),
                           Divider(height: 10, thickness: .5,),
                           SizedBox(height: 50,),
-                          ElevatedButton(onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(
-                                builder: (context) => HomePage()));
-                          }
-                              , child: Text("home_page"))
+                        // this is button for tow pages
+                          ElevatedButton(onPressed: (){}, child: Text("")),
+
                         ],
                       ),
                       )
